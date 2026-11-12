@@ -7,11 +7,14 @@ function App() {
   return (
     <main>
       <Header />
-      <Routes>
-        <Route path="/" element={<div></div>} />
-        <Route path="/buscaDeUsuarios" element={<BuscaDeUsuarios />} />
-        <Route path="/detalheDoUsuario" element={<DetalheDoUsuario />} />
-      </Routes>
+
+      <div className="w-full max-4xl mx-auto px-4 pt-4">
+        <Routes>
+          <Route path="/" element={<div></div>} />
+          <Route path="/buscaDeUsuarios" element={<BuscaDeUsuarios />} />
+          <Route path="/detalheDoUsuario" element={<DetalheDoUsuario />} />
+        </Routes>
+      </div>
     </main>
   )
 }
