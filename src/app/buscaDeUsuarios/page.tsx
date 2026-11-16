@@ -1,3 +1,4 @@
+import Filtro from "../../components/BuscarUsuario/Filtro";
 import Titulo from "../../components/BuscarUsuario/Titulo";
 
 export default function BuscaDeUsuarios() {
@@ -5,7 +6,7 @@ export default function BuscaDeUsuarios() {
         <main className="w-full min-h-screen ">
             <section className="bg-linear-to-r from-[#F5F0E6] to-verde-leve/50">
                 <Titulo />
-            
+                <Filtro />
             </section>
 
         </main>
