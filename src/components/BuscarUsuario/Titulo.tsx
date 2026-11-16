@@ -1,6 +1,6 @@
 export default function Titulo(){
     return(
-        <section className="bg-linear-to-r from-[#F5F0E6] to-verde-leve/50 p-4 ">
+        <section className="p-6 ">
             <h2 className="text-2xl font-bold text-[#320F22] leading-tight">Encontre
                  <span className="text-verde-secundario">Usuários</span></h2>
             <p className="text-[#404944] leading-relaxed">Pesquise membros da comunidade, visualize
