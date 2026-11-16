@@ -5,17 +5,17 @@ import DetalheDoUsuario from "./app/detalheDoUsuario/page"
 function App() {
 
   return (
-    <main>
+    <div>
       <Header />
 
-      <div className="w-full max-4xl mx-auto px-4 pt-4">
+      <div className="w-full mx-auto  ">
         <Routes>
           <Route path="/" element={<div></div>} />
           <Route path="/buscaDeUsuarios" element={<BuscaDeUsuarios />} />
           <Route path="/detalheDoUsuario" element={<DetalheDoUsuario />} />
         </Routes>
       </div>
-    </main>
+    </div>
   )
 }
 
