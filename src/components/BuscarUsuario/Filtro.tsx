@@ -1,7 +1,21 @@
+"use client"
 import { IoSearchSharp } from "react-icons/io5";
 import { LuSlidersHorizontal } from "react-icons/lu";
+import { MdPeopleAlt } from "react-icons/md";
+import { FaHeart } from "react-icons/fa";
+import { useState } from "react";
+type FiltroTipo = "todos" | "favoritos";
 
-export default function Filtro(){
+export default function Filtro() {
+    const [filtroSelecionado, setFiltroSelecionado] = useState<FiltroTipo>("todos");
+    const handleIsAtivo = () => {
+        setFiltroSelecionado(filtroSelecionado === "todos" ? "favoritos" : "todos");
+    }
+    const dados = [
+        { id: 1, nome: "Todos", quantidade: 28 },
+        { id: 2, nome: "Favoritos", quantidade: 19 },
+    ];
+
     return(
         <div className="p-6 " >
             <div className="bg-white roudend-2xl shadow-sm fborder border-[#D1D5DB] flex gap-2 items-center px-4 py-2 rounded-lg">
@@ -21,6 +35,24 @@ export default function Filtro(){
                     </button>
                 </div>
             </div>
-        </div>
+            <div className="flex  justify-center gap-4 mt-4">
+               {dados.map((item) => (
+                <div key={item.id} className={`flex gap-2 items-center px-2 py-3 rounded-lg cursor-pointer 
+                ${filtroSelecionado === item.nome.toLowerCase() ? "bg-verde-secundario" : "bg-fundo-principal"
+                }`} onClick={handleIsAtivo}>
+                    {item.nome === "Todos" ? (
+                        <MdPeopleAlt className={`text-xl ${filtroSelecionado === item.nome.toLowerCase() ? "text-fundo-principal" : "text-[#6B7280]"}`} />
+                    ) : (
+                        <FaHeart className={`text-xl ${filtroSelecionado === item.nome.toLowerCase() ? "text-fundo-principal" : "text-[#6B7280]"}`} />
+                    )}
+                    <span className={`font-semibold ${filtroSelecionado === item.nome.toLowerCase() ? 
+                        "text-fundo-principal" : "text-[#6B7280]"}`}>
+                        {item.nome} {item.quantidade}
+                    </span>
+                </div>
+               ))
+                }
+            </div>
+        </div> 
     )
 }
