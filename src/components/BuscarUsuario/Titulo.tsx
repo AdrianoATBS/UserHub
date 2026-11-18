@@ -1,6 +1,6 @@
 export default function Titulo(){
     return(
-        <section className="p-6 ">
+        <div className="p-4 ">
             <h2 className="text-2xl font-bold text-[#320F22] leading-tight">Encontre
                  <span className="text-verde-secundario">Usuários</span></h2>
             <p className="text-[#404944] leading-relaxed">Pesquise membros da comunidade, visualize
@@ -11,6 +11,6 @@ export default function Titulo(){
                 <div className="bg-verde-secundario w-8 h-8 rounded-full shrink-0 -ml-5"></div>
                 <span className="text-xs text-[#404944] font-bold">+1.420 conexões ativas</span>
             </div>
-        </section>
+        </div>
     )
 }

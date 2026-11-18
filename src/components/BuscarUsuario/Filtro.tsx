@@ -17,7 +17,7 @@ export default function Filtro() {
     ];
 
     return(
-        <div className="p-6 " >
+        <div className="p-4" >
             <div className="bg-white roudend-2xl shadow-sm fborder border-[#D1D5DB] flex gap-2 items-center px-4 py-2 rounded-lg">
                 <div className="bg-verde-leve h-12 w-12
                 rounded-lg flex justify-center items-center shrink-0">
