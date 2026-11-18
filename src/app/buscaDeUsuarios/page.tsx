@@ -9,7 +9,7 @@ export default function BuscaDeUsuarios() {
                 <Filtro />
             </section>
 
-            <section>
+            <section className="bg-[#F5F0E6]">
                 <CardUsuario/>
             </section>
 
