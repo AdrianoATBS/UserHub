@@ -31,7 +31,7 @@ export default function CardUsuario() {
                 </div>
                 <div className="flex justify-between items-center mt-2">
                     <p className="text-xs text-verde-principal font-semibold">• {usuario.projetos} Projetos</p>
-                    <Link to="/DetalheDoUsuario" className="text-[#320F22] font-bold text-xs bg-[#FFE8F0] 
+                    <Link to={`/DetalheDoUsuario/${usuario.id}`} className="text-[#320F22] font-bold text-xs bg-[#FFE8F0] 
                     px-4 py-3 rounded-md cursor-pointer hover:bg-[#F5F0E6] active:scale-95 transition-colors">
                         Ver perfil →
                     </Link>
