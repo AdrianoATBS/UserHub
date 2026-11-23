@@ -4,8 +4,9 @@ import Titulo from "../../components/BuscarUsuario/Titulo";
 import CardUsuario from "../../components/BuscarUsuario/CardUsuario";
 import { userService } from "../../services/userService";
 import { useEffect, useState } from "react";
+import type { Usuario } from "../../types/Usuario";
 export default function BuscaDeUsuarios() {
-    const [usuarios, setUsuarios] = useState([]);
+    const [usuarios, setUsuarios] = useState<Usuario[]>([]);
 
     useEffect(() => {
         async function fetchUsuarios() {

@@ -1,17 +1,8 @@
 import {Link} from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
-interface UsuarioProps {
-    id: number;
-    nome: string;
-    username: string;
-    email: string;
-    cargo: string;
-    especialidade: string;
-    projetos: number;
-    img?: string;
-}
+import type { Usuario} from "../../types/Usuario"
 
-export default function CardUsuario({usuarios}: {usuarios: UsuarioProps[]}) {
+export default function CardUsuario({usuarios}: {usuarios: Usuario[]}) {
    
     return(
         <div className="p-4">
