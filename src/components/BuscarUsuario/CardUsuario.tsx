@@ -1,21 +1,24 @@
 import {Link} from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
+interface UsuarioProps {
+    id: number;
+    nome: string;
+    username: string;
+    email: string;
+    cargo: string;
+    especialidade: string;
+    projetos: number;
+    img?: string;
+}
 
-
-export default function CardUsuario() {
-    const usuarios = [
-        { id: 1, nome: "Beatriz Mendes", username: "@beatriz.m", email: "beatriz@example.com", cargo: "Designer UI/UX",
-             especialidade: "Design System", projetos: 14 },
-        { id: 2, nome: "Carlos Silva", username: "@carlos.s", email: "carlos@example.com", cargo: "Desenvolvedor Front-end", 
-            especialidade: "React / Tailwind", projetos: 32 },
-        { id: 3, nome: "Ana Paula", username: "@ana.p", email: "ana@example.com", cargo: "Dev Backend / Cloud", 
-            especialidade: "Node.js & Go", projetos: 21 },
-    ];
+export default function CardUsuario({usuarios}: {usuarios: UsuarioProps[]}) {
+   
     return(
         <div className="p-4">
             {usuarios.map((usuario) => (
             <div key={usuario.id} className="w-full border-2 border-[#BFC9C2]/40 bg-fundo-card shadow-md rounded-2xl p-4 mt-4 ">
-                <div className="border-4 border-verde-leve rounded-2xl bg-black w-18 h-18 "></div>
+                <img src={usuario.img} alt={usuario.nome} className="border-4
+                 border-verde-leve rounded-2xl  w-18 h-18 object-cover object-top object-center  "></img>
                 <div className="flex justify-end  rounded-lg "> 
                     <FaHeart className="text-verde-secundario text-2xl bg-[#FFF0F4] rounded-md 
                     h-8 w-8 p-1 -mt-15 mr-4" />
