@@ -4,7 +4,7 @@ import { IoMdShare } from "react-icons/io";
 
 export default function SecaoTopo() {
     return (
-        <section className="w-full p-4 mt-3">
+        <section className="w-full  mt-3">
             <button className="w-fit border border-[#BFC9C2]/40 bg-fundo-card p-2 rounded-lg
             text-sm text-verde-principal font-semibold ">
                 ⬅ Voltar para Busca
